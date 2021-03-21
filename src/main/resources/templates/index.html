@@ -7,5 +7,11 @@
 <body>
 	<h1>TodoList</h1>
 	<p th:each="todo : ${todos}" th:text="${todo.title}" />
+
+	<form method="post" th:action="@{/add}">
+		<input type="text" name="title" />
+		<input type="date" name="time" />
+		<input type="submit" value="追加" />
+	</form>
 </body>
 </html>

@@ -22,4 +22,10 @@ public class TodoController {
 		model.addAttribute("todos", list);
 		return "index";
 	}
+
+	@RequestMapping(value="/add")
+	public String add(Todo todo) {
+		todoMapper.add(todo);
+		return "redirect:/";
+	}
 }
