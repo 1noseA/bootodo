@@ -1,4 +1,4 @@
-package controller;
+package com.boot.todo.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import entity.Todo;
-import mapper.TodoMapper;
+import com.boot.todo.entity.Todo;
+import com.boot.todo.mapper.TodoMapper;
 
 @Controller
 public class TodoController {

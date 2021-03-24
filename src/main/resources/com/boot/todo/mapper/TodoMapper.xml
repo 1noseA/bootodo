@@ -2,12 +2,12 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mapper.TodoMapper">
-	<select id="selectAll" resultType="entity.Todo">
+<mapper namespace="com.boot.todo.mapper.TodoMapper">
+	<select id="selectAll" resultType="com.boot.todo.entity.Todo">
 		select * from items
 	</select>
 
-	<insert id="add" parameterType="entity.Todo">
+	<insert id="add" parameterType="com.boot.todo.entity.Todo">
 		insert into items (title, time)
 		values (#{title}, to_date(#{time}, 'yy-mm-dd'))
 	</insert>

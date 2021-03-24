@@ -1,10 +1,10 @@
-package mapper;
+package com.boot.todo.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import entity.Todo;
+import com.boot.todo.entity.Todo;
 
 @Mapper
 public interface TodoMapper {

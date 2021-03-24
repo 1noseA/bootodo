@@ -1,4 +1,4 @@
-package entity;
+package com.boot.todo.entity;
 
 import lombok.Data;
 
