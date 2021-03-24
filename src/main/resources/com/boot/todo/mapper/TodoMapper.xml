@@ -11,4 +11,11 @@
 		insert into items (title, time)
 		values (#{title}, to_date(#{time}, 'yy-mm-dd'))
 	</insert>
+
+	<update id="update" parameterType="com.boot.todo.entity.Todo">
+		update items set
+			title = #{title},
+			time = to_date(#{time}, 'yy-mm-dd')
+			where id = #{id}
+	</update>
 </mapper>

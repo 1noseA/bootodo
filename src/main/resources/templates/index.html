@@ -6,8 +6,15 @@
 </head>
 <body>
 	<h1>TodoList</h1>
-	<p th:each="todo : ${todos}" th:text="${todo.title}" />
 
+	<form method="post" th:action="@{/update}" th:each="todo : ${todos}">
+		<input type="hidden" name="id" th:value="${todo.id}" />
+		<input type="text" name="title" th:value="${todo.title}" />
+		<input type="date" name="time" th:value="${todo.time}" />
+		<input type="submit" value="更新" />
+	</form>
+
+	<h3>新しく追加する</h3>
 	<form method="post" th:action="@{/add}">
 		<input type="text" name="title" />
 		<input type="date" name="time" />
