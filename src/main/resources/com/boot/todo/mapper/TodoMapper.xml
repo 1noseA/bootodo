@@ -16,6 +16,7 @@
 		update items set
 			title = #{title},
 			time = to_date(#{time}, 'yy-mm-dd')
+			flg = #{flg}
 			where id = #{id}
 	</update>
 </mapper>
