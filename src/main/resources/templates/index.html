@@ -24,11 +24,16 @@
 		<input type="submit" value="更新" />
 	</form>
 
+	<form method="post" th:action="@{/delete}" >
+		<input type="submit" value="全削除" />
+	</form>
+
 	<h3>新しく追加する</h3>
 	<form method="post" th:action="@{/add}">
 		<input type="text" name="title" />
 		<input type="date" name="time" />
 		<input type="submit" value="追加" />
 	</form>
+
 </body>
 </html>

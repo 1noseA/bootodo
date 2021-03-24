@@ -23,4 +23,7 @@ public interface TodoMapper {
 	// 更新
 	public void update(Todo todo);
 
+	// 全削除
+	public void delete();
+
 }

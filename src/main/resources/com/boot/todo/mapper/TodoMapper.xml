@@ -27,4 +27,9 @@
 			flg = #{flg}
 			where id = #{id}
 	</update>
+
+	<delete id="delete" parameterType="com.boot.todo.entity.Todo" >
+		delete from items
+		where flg = 1
+	</delete>
 </mapper>
