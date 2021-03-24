@@ -10,6 +10,11 @@
 	<select id="selectIncomplete" resultType="com.boot.todo.entity.Todo">
 		select * from items where flg = 0
 	</select>
+
+	<select id="selectComplete" resultType="com.boot.todo.entity.Todo">
+		select * from items where flg = 1
+	</select>
+
 	<insert id="add" parameterType="com.boot.todo.entity.Todo">
 		insert into items (title, time)
 		values (#{title}, to_date(#{time}, 'yy-mm-dd'))
