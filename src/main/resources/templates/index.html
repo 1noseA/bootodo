@@ -2,6 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="webjars/bootstrap/4.6.0/css/bootstrap.min.css" />
+<script src="webjars/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
 <title>bootodo</title>
 </head>
 <body>
@@ -35,5 +39,6 @@
 		<input type="submit" value="追加" />
 	</form>
 
+	<script type="text/javascript" th:src="@{/js/todo.js}"></script>
 </body>
 </html>
