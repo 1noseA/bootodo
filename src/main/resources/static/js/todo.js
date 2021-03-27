@@ -3,6 +3,10 @@
  */
 $(function() {
 
+	// 完了済みの個数・表示
+	let doneCount = $("$donetodos").children("tr").length;
+	$("#done_count").text(doneCount);
+
 	// 更新処理
 	$('.todo input').change(function(){
 		const todo = $(this).parents('.todo');
@@ -45,6 +49,18 @@ $(function() {
 			}
 
 			$("done_cont").text(doneCount);
+		}
+	})
+
+	// 完了済みタスク表示/非表示切り替え
+	$('.button_for_show').chick(function() {
+		let showState = $('#done_table').css('display');
+		if (showState == "none") {
+			$('#done_table').show();
+			$(this).css({ transform: 'rotate(225deg)', 'bottom':'-4px' });
+		} else {
+			$('#done_table').hide();
+			$(this).css({ transform: 'rotate(45deg)', 'bottom':'4px' });
 		}
 	})
 })
