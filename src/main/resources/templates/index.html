@@ -17,14 +17,14 @@
 		<tbody id="todos">
 			<tr class="todo" th:each="todo : ${todos}">
 				<td style="width:2rem">
-					<input type="checkbox" name="flg" value="1" />
+					<input type="checkbox" name="flg" />
 					<input type="hidden" name="id" th:value="${todo.id}" />
 				</td>
 				<td style="width:22rem">
-					<input type="text" name="title" th:value="${todo.title}" />
+					<input type="text" style="border:none;width:22rem" name="title" th:value="${todo.title}" />
 				</td>
 				<td>
-					<input type="date" name="time" th:value="${todo.time}" />
+					<input type="date" style="border:none" name="time" th:value="${todo.time}" />
 				</td>
 			</tr>
 		</tbody>
