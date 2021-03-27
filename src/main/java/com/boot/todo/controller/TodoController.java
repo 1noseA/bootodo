@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.boot.todo.entity.Todo;
 import com.boot.todo.mapper.TodoMapper;
@@ -33,9 +34,9 @@ public class TodoController {
 	}
 
 	@RequestMapping(value="/update")
-	public String update(Todo todo) {
+	@ResponseBody
+	public void update(Todo todo) {
 		todoMapper.update(todo);
-		return "redirect:/";
 	}
 
 	@RequestMapping(value="/delete")
