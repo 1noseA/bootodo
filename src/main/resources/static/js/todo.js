@@ -63,4 +63,16 @@ $(function() {
 			$(this).css({ transform: 'rotate(45deg)', 'bottom':'4px' });
 		}
 	})
+
+	// 追加処理
+	$('#add').click(function() {
+		const params = $('add_form').serializeArray();
+		$.post("/add", params).done(function(json) {
+			const clone = $('#todos tr:first').clone(true);
+			clone.find('input[name="id"]').val(json.id);
+			clone.find('input[name="title"]').val(json.title);
+			clone.find('input[name="time"]').val(json.time);
+			$('#todos').append(Clone[0]);
+		})
+	})
 })

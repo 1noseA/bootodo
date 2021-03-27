@@ -28,9 +28,10 @@ public class TodoController {
 	}
 
 	@RequestMapping(value="/add")
-	public String add(Todo todo) {
+	@ResponseBody
+	public Todo add(Todo todo) {
 		todoMapper.add(todo);
-		return "redirect:/";
+		return todo;
 	}
 
 	@RequestMapping(value="/update")
