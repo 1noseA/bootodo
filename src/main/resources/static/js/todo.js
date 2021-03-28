@@ -29,7 +29,7 @@ $(function(){
 	    //完了ボタンを押した際の処理
 	    doneCount =  $('#done_count').text();
 
-	    if($(this).prop('name') == "done_flg"){
+	    if($(this).prop('name') == "flg"){
 	      if(isDone == true){
 	        $(todo).appendTo('#donetodes');
 	        todo.find('input[name="title"]').css('text-decoration','line-through')
