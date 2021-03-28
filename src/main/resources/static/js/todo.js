@@ -70,4 +70,12 @@ $(function(){
 	        $('#todes').append(clone[0]);
 	    })
 	})
+
+	// 削除処理
+	$('#delete').click(function() {
+		$.post("/delete").done(function() {
+			$('#donetodes').empty();
+			$('#done_count').text(0);
+		})
+	})
 })

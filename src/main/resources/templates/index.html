@@ -49,26 +49,24 @@
 	<button type="button" class="btn btn-light rounded-circle p-0 text-muted font-weight-bold" data-toggle="modal" data-target="#modal"
     style="width:2.5rem;height:2.5rem;">＋</button>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-       <div class="modal-dialog">
-           <div class="modal-content">
-               <div class="modal-body">
-                   <form id="add_form">
-                       <div class="form-group">
-                           <input type="text" name="title" class="form-control" placeholder="新しいタスク"/>
-                       </div>
-                       <div class="form-group">
-                           <input type="date" name="time" class="form-control" style="width:60%;" />
-                       </div>
-                       <button type="button" class="btn btn-primary float-right " data-dismiss="modal" id="add">追加</button>
-                   </form>
-               </div>
-           </div>
-       </div>
-   </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="add_form">
+                        <div class="form-group">
+                            <input type="text" name="title" class="form-control" placeholder="新しいタスク"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="time" class="form-control" style="width:60%;" />
+                        </div>
+                        <button type="button" class="btn btn-primary float-right " data-dismiss="modal" id="add">追加</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<form method="post" th:action="@{/delete}" >
-		<input type="submit" value="全削除" />
-	</form>
+	<button type="button" class="btn btn-outline-secondary" id="delete">完了済みを削除</button>
 
 	<script type="text/javascript" th:src="@{/js/todo.js}"></script>
 </body>
